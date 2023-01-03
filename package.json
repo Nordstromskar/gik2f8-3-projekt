@@ -1,0 +1,19 @@
+{
+  "name": "projekt-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nordstromskar/gik2f8-5-projekt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nordstromskar/gik2f8-5-projekt/issues"
+  },
+  "homepage": "https://github.com/Nordstromskar/gik2f8-5-projekt#readme"
+}
