@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon"
+        href="data:image/x-icon;"
+        type="image/x-icon" />
+  <title>Todo-applikation</title>
+</head>
+
+<body>
+  <main id="root"
+        class="pt-24 bg-gradient-to-r from-violet-200 to-indigo-500 h-screen">
+    <h1 class="text-center mb-10 text-7xl text-black-900">Book list</h1>
+    <section class="flex gap-10 w-full xl:w-4/5 mx-2 xl:mx-auto bg-white bg-opacity-75 p-5 rounded-lg">
+      <section class="flex-1">
+        <h2 class="mb-6 text-3xl text-black-500">Add a book</h2>
+        <form id="todoForm"
+              name="todoForm">
+          <section class="mb-2">
+            <label class="block pr-5 mb-2 text-xl"
+                   for="title">Title</label>
+            
+    
+            <p class="message text-sm text-red-700 mb-2 hidden">
+              Error message
+            </p>
+    
+            <input type="text"
+                   id="title"
+                   name="title"
+                   class="w-full rounded-md border-indigo-500 border-2 focus-within:outline-none focus:border-violet-600 px-4 py-2" />
+          </section>
+          <section class="mb-2">
+            <label class="block pr-5 mb-2 text-xl"
+                   for="author">Author</label>
+            <p class="message text-sm text-red-700 mb-2 hidden">
+              Error message
+            </p>
+            <textarea maxlength="500"
+                      id="author"
+                      name="author"
+                      class="resize-none w-full rounded-md border-indigo-500 border-2 focus-within:outline-none focus:border-violet-600 px-4 py-2"></textarea>
+          </section>
+          <section class="mb-2">
+            <label class="block pr-5 mb-2 text-xl"
+                   for="title">Release date</label>
+            <p class="message text-sm text-red-700 mb-2 hidden">
+              Error message
+            </p>
+            <input type="date"
+                   id="releaseDate"
+                   name="releaseDate"
+                   class="w-full rounded-md border-indigo-500 border-2 focus-within:outline-none focus:border-violet-600 px-4 py-2" />
+          </section>
+          <button name="submitTodoForm"
+                  class="rounded-md bg-indigo-500 hover:bg-violet-600 px-4 py-1"
+                  type="submit">
+            Add
+          </button>
+        </form>
+      </section>
+      <section class="flex-1 px-5">
+        <h2 class="mb-6 text-3xl text-black-900">All Books</h2>
+        <ul id="todoList">
+
+        </ul>
+      </section>
+    </section>
+  </main>
+  <script src="Api.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
