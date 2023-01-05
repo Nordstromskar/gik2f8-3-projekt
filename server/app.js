@@ -17,7 +17,7 @@ app
 app.get('/books', async (req, res) => {
   try {
     const books = await fs.readFile('./books.json');
-    res.send(JSON.parse(tasks));
+    res.send(JSON.parse(books));
   } catch (error) {
     res.status(500).send({ error });
   }
