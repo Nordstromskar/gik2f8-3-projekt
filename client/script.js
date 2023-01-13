@@ -28,21 +28,21 @@ function validateField(field) {
     case 'title': {
       if (value.length < 2) {
         titleValid = false;
-        validationMessage = "Fältet 'Titel' måste innehålla minst 2 tecken.";
+        validationMessage = "The field 'Title' has to contain atleast 2 characters.";
       } else if (value.length > 100) {
         titleValid = false;
         validationMessage =
-          "Fältet 'Titel' får inte innehålla mer än 100 tecken.";
+          "The field 'Title' cant contain more than 100 characters.";
       } else {
         titleValid = true;
       }
       break;
     }
     case 'author': {
-      if (value.length > 500) {
+      if (value.length > 100) {
         authorValid = false;
         validationMessage =
-          "Fältet 'Beskrvining' får inte innehålla mer än 500 tecken.";
+          " The field 'Author' cant contain more than 100 characters.";
       } else {
         authorValid = true;
       }
@@ -51,7 +51,7 @@ function validateField(field) {
     case 'releaseDate': {
       if (value.length === 0) {
         releaseDateValid = false;
-        validationMessage = "Fältet 'Slutförd senast' är obligatorisk.";
+        validationMessage = "The field 'Release Date' is mandatory.";
       } else {
         releaseDateValid = true;
       }
@@ -137,7 +137,7 @@ function renderTask({ id, title, author, releaseDate, completed }) {
   author &&
 
     (html += `
-      <p class="ml-8 mt-2 text-lg font-bold italic">${author}</p>
+      <p class="ml-8 mt-2 text-lg font-bold italic">Author: ${author}</p>
   `);
 
   html += `
@@ -158,7 +158,7 @@ function renderTask({ id, title, author, releaseDate, completed }) {
   author &&
 
     (html += `
-      <p class="ml-8 mt-2 text-lg font-bold italic">${author}</p>   
+      <p class="ml-8 mt-2 text-lg font-bold italic">Author: ${author}</p>   
   `);
 
   html += `
